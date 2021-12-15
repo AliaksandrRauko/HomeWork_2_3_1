@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1aH-jl-ZoM">
-                                <rect key="frame" x="20" y="230" width="280" height="100"/>
+                                <rect key="frame" x="20" y="150" width="280" height="100"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rk8-yc-r2X">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="36"/>
@@ -37,7 +37,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w83-UR-IL8">
-                                <rect key="frame" x="110" y="358" width="100" height="45"/>
+                                <rect key="frame" x="110" y="278" width="100" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="QqJ-cc-iJK"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="qSg-pi-mde"/>
@@ -54,11 +54,11 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbR-Oq-TGI"/>
-                                    <segue destination="A5i-ET-ZXm" kind="presentation" id="JZz-9x-Ogt"/>
+                                    <segue destination="A5i-ET-ZXm" kind="presentation" identifier="segueToNext" id="JZz-9x-Ogt"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pok-W9-a1R">
-                                <rect key="frame" x="10" y="442" width="300" height="60"/>
+                                <rect key="frame" x="10" y="362" width="300" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QS7-lg-dFO">
                                         <rect key="frame" x="0.0" y="0.0" width="146" height="60"/>
@@ -81,7 +81,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Forgot Passvord?">
+                                                <fragment content="Forgot Password?">
                                                     <attributes>
                                                         <font key="NSFont" size="11" name="Helvetica"/>
                                                     </attributes>
@@ -105,7 +105,7 @@
                             <constraint firstItem="pok-W9-a1R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8I6-MQ-Fc3"/>
                             <constraint firstItem="1aH-jl-ZoM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CgY-JA-DpN"/>
                             <constraint firstItem="pok-W9-a1R" firstAttribute="top" secondItem="w83-UR-IL8" secondAttribute="bottom" constant="39" id="HZR-Cr-8xk"/>
-                            <constraint firstItem="1aH-jl-ZoM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="230" id="KjA-G1-PnD"/>
+                            <constraint firstItem="1aH-jl-ZoM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="KjA-G1-PnD"/>
                             <constraint firstItem="w83-UR-IL8" firstAttribute="top" secondItem="1aH-jl-ZoM" secondAttribute="bottom" constant="28" id="Tb4-CU-LH2"/>
                             <constraint firstItem="w83-UR-IL8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tf0-dd-RmY"/>
                         </constraints>
@@ -122,9 +122,9 @@
         <!--Welcome View Controller-->
         <scene sceneID="hIO-69-t9O">
             <objects>
-                <viewController id="A5i-ET-ZXm" customClass="WelcomeViewController" customModule="HomeWork_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="A5i-ET-ZXm" customClass="WelcomeViewController" customModule="HomeWork_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bAY-l9-qdP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfT-IR-GGh">
@@ -138,7 +138,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgm-n4-3c3">
-                                <rect key="frame" x="110" y="338" width="100" height="40"/>
+                                <rect key="frame" x="110" y="358" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="2qI-50-2aX"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Biy-A5-Hsy"/>

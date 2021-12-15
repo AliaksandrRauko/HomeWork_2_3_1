@@ -20,11 +20,14 @@ class ViewController: UIViewController {
         userTextField.autocorrectionType = .no
         userTextField.smartInsertDeleteType = .no
         passwordTextFild.isSecureTextEntry = true
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let welcomeVS = segue.destination as! WelcomeViewController
-        welcomeVS.finalName = userTextField.text
+        if segue.identifier == "segueToNext" {
+            let welcomeVS = segue.destination as! WelcomeViewController
+            welcomeVS.finalName = userTextField.text
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -38,6 +41,8 @@ class ViewController: UIViewController {
         
         if userTextField != userName || passwordTextFild != userPassword {
             showForgotThings(title: "Erroooor!", message: "Incorrect name or password😫")
+        } else {
+            performSegue(withIdentifier: "segueToNext", sender: self)
         }
     }
     
