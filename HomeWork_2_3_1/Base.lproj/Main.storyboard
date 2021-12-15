@@ -54,7 +54,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logInAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbR-Oq-TGI"/>
-                                    <segue destination="MkR-IS-R46" kind="presentation" id="LfT-zz-X9y"/>
+                                    <segue destination="A5i-ET-ZXm" kind="presentation" id="JZz-9x-Ogt"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pok-W9-a1R">
@@ -117,58 +117,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="171" y="-630"/>
+            <point key="canvasLocation" x="-1414" y="-1730"/>
         </scene>
-        <!--Welcome View Controller-->
-        <scene sceneID="Uc7-Qs-nLu">
+        <!--View Controller-->
+        <scene sceneID="hIO-69-t9O">
             <objects>
-                <viewController id="MkR-IS-R46" customClass="WelcomeViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="m8x-3y-i3b">
+                <viewController id="A5i-ET-ZXm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bAY-l9-qdP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RqX-dZ-hub">
-                                <rect key="frame" x="85" y="60" width="150" height="60"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hve-Md-q3b">
+                                <rect key="frame" x="85" y="70" width="150" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="87K-B2-dBp"/>
-                                    <constraint firstAttribute="height" constant="60" id="n5b-ow-oyY"/>
+                                    <constraint firstAttribute="height" constant="60" id="Pii-OH-YAj"/>
+                                    <constraint firstAttribute="width" constant="150" id="y5N-hH-HBr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ss2-ic-cF4">
-                                <rect key="frame" x="110" y="353" width="100" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgm-n4-3c3">
+                                <rect key="frame" x="110" y="338" width="100" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="XkO-Io-B54"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="c4m-ie-8OF"/>
+                                    <constraint firstAttribute="height" constant="40" id="2qI-50-2aX"/>
+                                    <constraint firstAttribute="width" constant="100" id="Biy-A5-Hsy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Log in">
                                             <attributes>
-                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="logInAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Wm-af-0CV"/>
-                                </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="gmF-MX-A3y"/>
+                        <viewLayoutGuide key="safeArea" id="15b-EA-B5J"/>
                         <constraints>
-                            <constraint firstItem="gmF-MX-A3y" firstAttribute="bottom" secondItem="ss2-ic-cF4" secondAttribute="bottom" constant="150" id="1CI-Pz-Sit"/>
-                            <constraint firstItem="RqX-dZ-hub" firstAttribute="top" secondItem="gmF-MX-A3y" secondAttribute="top" constant="60" id="bgv-ex-eOf"/>
-                            <constraint firstItem="RqX-dZ-hub" firstAttribute="centerX" secondItem="gmF-MX-A3y" secondAttribute="centerX" id="di8-pB-6m5"/>
-                            <constraint firstItem="ss2-ic-cF4" firstAttribute="centerX" secondItem="m8x-3y-i3b" secondAttribute="centerX" id="hwq-yu-OKj"/>
+                            <constraint firstItem="zgm-n4-3c3" firstAttribute="centerX" secondItem="bAY-l9-qdP" secondAttribute="centerX" id="OgQ-hQ-QBX"/>
+                            <constraint firstItem="15b-EA-B5J" firstAttribute="bottom" secondItem="zgm-n4-3c3" secondAttribute="bottom" constant="170" id="icd-x9-AP8"/>
+                            <constraint firstItem="hve-Md-q3b" firstAttribute="top" secondItem="15b-EA-B5J" secondAttribute="top" constant="70" id="kSb-LN-ivN"/>
+                            <constraint firstItem="hve-Md-q3b" firstAttribute="centerX" secondItem="bAY-l9-qdP" secondAttribute="centerX" id="nsu-nL-iTG"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cmd-CH-hHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wkx-ls-laZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="923" y="-631"/>
+            <point key="canvasLocation" x="-643" y="-1730"/>
         </scene>
     </scenes>
     <resources>
