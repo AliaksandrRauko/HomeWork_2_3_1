@@ -10,24 +10,35 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var userTextField: UITextField!
-    @IBOutlet var passworTextFild: UITextField!
+    @IBOutlet var passwordTextFild: UITextField!
     
     private let userName = "User"
     private let userPassword = "Password"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        userTextField.autocorrectionType = .no
+        userTextField.smartInsertDeleteType = .no
+        passwordTextFild.isSecureTextEntry = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let welcomeVS = segue.destination as! WelcomeViewController
-//        welcomeVS.finalText = userTextField.text
-
+        let welcomeVS = segue.destination as! WelcomeViewController
+        welcomeVS.finalName = userTextField.text
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
     }
     
     @IBAction func logInAction() {
+        guard let userTextField = userTextField.text else {return}
+        guard let passwordTextFild = passwordTextFild.text else {return}
         
+        if userTextField != userName || passwordTextFild != userPassword {
+            showForgotThings(title: "Erroooor!", message: "Incorrect name or password😫")
+        }
     }
     
     @IBAction func forgotUserAction() {
@@ -36,6 +47,11 @@ class ViewController: UIViewController {
     
     @IBAction func forgotPasswordAction() {
         showForgotThings(title: "Oooops!", message: "Your password is \(userPassword) 😀")
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userTextField.text = ""
+        passwordTextFild.text = ""
     }
 }
 
@@ -46,7 +62,7 @@ extension ViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
             self.userTextField.text = "";
-            self.passworTextFild.text = ""
+            self.passwordTextFild.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)

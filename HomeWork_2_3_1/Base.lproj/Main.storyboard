@@ -111,36 +111,37 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="passworTextFild" destination="Jd7-Ah-epG" id="WWg-sY-Kvw"/>
+                        <outlet property="passwordTextFild" destination="Jd7-Ah-epG" id="WWg-sY-Kvw"/>
                         <outlet property="userTextField" destination="Rk8-yc-r2X" id="1mU-D2-fzl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1414" y="-1730"/>
+            <point key="canvasLocation" x="-2229" y="-2064"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="hIO-69-t9O">
             <objects>
-                <viewController id="A5i-ET-ZXm" sceneMemberID="viewController">
+                <viewController id="A5i-ET-ZXm" customClass="WelcomeViewController" customModule="HomeWork_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bAY-l9-qdP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hve-Md-q3b">
-                                <rect key="frame" x="85" y="70" width="150" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfT-IR-GGh">
+                                <rect key="frame" x="85" y="70" width="150" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Pii-OH-YAj"/>
-                                    <constraint firstAttribute="width" constant="150" id="y5N-hH-HBr"/>
+                                    <constraint firstAttribute="height" constant="80" id="YPo-ew-GK8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="u8l-Z9-AS2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgm-n4-3c3">
                                 <rect key="frame" x="110" y="338" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="2qI-50-2aX"/>
-                                    <constraint firstAttribute="width" constant="100" id="Biy-A5-Hsy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Biy-A5-Hsy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -152,20 +153,27 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="guu-5P-rNf" kind="unwind" unwindAction="unwindFor:" id="IMp-ab-pnP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="15b-EA-B5J"/>
                         <constraints>
+                            <constraint firstItem="HfT-IR-GGh" firstAttribute="centerX" secondItem="bAY-l9-qdP" secondAttribute="centerX" id="2Yc-jH-6Ek"/>
                             <constraint firstItem="zgm-n4-3c3" firstAttribute="centerX" secondItem="bAY-l9-qdP" secondAttribute="centerX" id="OgQ-hQ-QBX"/>
                             <constraint firstItem="15b-EA-B5J" firstAttribute="bottom" secondItem="zgm-n4-3c3" secondAttribute="bottom" constant="170" id="icd-x9-AP8"/>
-                            <constraint firstItem="hve-Md-q3b" firstAttribute="top" secondItem="15b-EA-B5J" secondAttribute="top" constant="70" id="kSb-LN-ivN"/>
-                            <constraint firstItem="hve-Md-q3b" firstAttribute="centerX" secondItem="bAY-l9-qdP" secondAttribute="centerX" id="nsu-nL-iTG"/>
+                            <constraint firstItem="HfT-IR-GGh" firstAttribute="top" secondItem="15b-EA-B5J" secondAttribute="top" constant="70" id="oa1-r4-xbh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="finalNameLabel" destination="HfT-IR-GGh" id="e7u-Tx-hGG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wkx-ls-laZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="guu-5P-rNf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-643" y="-1730"/>
+            <point key="canvasLocation" x="-1457" y="-2064"/>
         </scene>
     </scenes>
     <resources>
