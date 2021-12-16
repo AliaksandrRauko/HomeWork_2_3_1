@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var passwordTextFild: UITextField!
@@ -31,8 +31,8 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
         super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     @IBAction func logInAction() {
@@ -62,11 +62,10 @@ class ViewController: UIViewController {
 
 
 // MARK: - Private Methods
-extension ViewController {
+extension LoginViewController {
     private func showForgotThings(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
-            self.userTextField.text = "";
             self.passwordTextFild.text = ""
         }
         alert.addAction(okAction)
