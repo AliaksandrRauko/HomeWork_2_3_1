@@ -24,10 +24,8 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueToNext" {
-            let welcomeVS = segue.destination as! WelcomeViewController
-            welcomeVS.finalName = userTextField.text
-        }
+        let welcomeVS = segue.destination as! WelcomeViewController
+        welcomeVS.finalName = userTextField.text
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -41,18 +39,15 @@ class LoginViewController: UIViewController {
         
         if userTextField != userName || passwordTextFild != userPassword {
             showForgotThings(title: "Erroooor!", message: "Incorrect name or password😫")
-        } else {
-            performSegue(withIdentifier: "segueToNext", sender: self)
         }
     }
     
-    @IBAction func forgotUserAction() {
-        showForgotThings(title: "Oooops!", message: "Your name is \(userName) 😀")
+    @IBAction func forgotAction(_ sender: UIButton) {
+        sender.tag == 0
+        ? showForgotThings(title: "Oooops!", message: "Your name is \(userName) 😀")
+        : showForgotThings(title: "Oooops!", message: "Your password is \(userPassword) 😀")
     }
     
-    @IBAction func forgotPasswordAction() {
-        showForgotThings(title: "Oooops!", message: "Your password is \(userPassword) 😀")
-    }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userTextField.text = ""
@@ -71,4 +66,16 @@ extension LoginViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userTextField {
+            passwordTextFild.becomeFirstResponder()
+        } else {
+            logInAction()
+            performSegue(withIdentifier: "segueToWelcome", sender: nil)
+        }
+        return true
+    }
 }
+    
+
