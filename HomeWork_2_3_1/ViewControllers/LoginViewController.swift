@@ -21,11 +21,23 @@ class LoginViewController: UIViewController {
         userTextField.smartInsertDeleteType = .no
         passwordTextFild.isSecureTextEntry = true
         
+        userTextField.text = "User"
+        passwordTextFild.text = "Password"
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let welcomeVS = segue.destination as! WelcomeViewController
-        welcomeVS.finalName = userTextField.text
+        let tabBarController = segue.destination as! UITabBarController
+        
+        for viewController in tabBarController.viewControllers ?? [] {
+            if let welcomeVS = viewController as? WelcomeViewController {
+                welcomeVS.finalName = userTextField.text
+            } else if let navigationVS = viewController as? UINavigationController {
+                let userNameVS = navigationVS.topViewController as! UserNameViewController
+                userNameVS.finalName = userTextField.text
+            }
+
+        }        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -31,9 +31,9 @@ extension WelcomeViewController {
         gradient.type = .axial
         
         gradient.colors = [
-            UIColor.red.cgColor,
-            UIColor.yellow.cgColor,
-            UIColor.cyan.cgColor]
+            UIColor.black.cgColor,
+            UIColor.blue.cgColor,
+            UIColor.white.cgColor]
         
         gradient.locations = [0, 0.25, 1]
         gradient.frame = view.bounds
@@ -45,7 +45,7 @@ extension WelcomeViewController {
         finalNameLabel.textAlignment = .center
         finalNameLabel.textColor = UIColor.white
         finalNameLabel.numberOfLines = 4
-        finalNameLabel.text = "Welcome, \(finalName ?? "") ! \n\n👏"
-    }    
+        finalNameLabel.text = "Welcome, \(finalName ?? "") ! \n\n👏"        
+    }
 }
 

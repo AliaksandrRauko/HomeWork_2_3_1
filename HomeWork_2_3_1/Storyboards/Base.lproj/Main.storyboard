@@ -4,6 +4,7 @@
     <accessibilityOverrides dynamicTypePreference="3"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -56,7 +57,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="logInAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbR-Oq-TGI"/>
-                                            <segue destination="A5i-ET-ZXm" kind="presentation" identifier="segueToWelcome" id="JZz-9x-Ogt"/>
+                                            <segue destination="guh-nP-bIi" kind="presentation" id="Viq-DU-cPz"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pok-W9-a1R">
@@ -114,12 +115,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2567" y="-2195"/>
+            <point key="canvasLocation" x="-3206" y="-2221"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Welcome-->
         <scene sceneID="hIO-69-t9O">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="A5i-ET-ZXm" customClass="WelcomeViewController" customModule="HomeWork_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Welcome" modalPresentationStyle="fullScreen" id="A5i-ET-ZXm" customClass="WelcomeViewController" customModule="HomeWork_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bAY-l9-qdP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,15 +136,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgm-n4-3c3">
-                                <rect key="frame" x="137.5" y="457" width="100" height="40"/>
+                                <rect key="frame" x="137.5" y="408" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="2qI-50-2aX"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Biy-A5-Hsy"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Log in">
+                                        <fragment content="Log off">
                                             <attributes>
                                                 <font key="NSFont" size="18" name="Helvetica"/>
                                             </attributes>
@@ -163,6 +165,10 @@
                             <constraint firstItem="HfT-IR-GGh" firstAttribute="top" secondItem="15b-EA-B5J" secondAttribute="top" constant="70" id="oa1-r4-xbh"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="XgM-ZF-yXt">
+                        <imageReference key="image" image="homekit" catalog="system" renderingMode="original"/>
+                        <imageReference key="selectedImage" image="homekit" catalog="system" renderingMode="original"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="finalNameLabel" destination="HfT-IR-GGh" id="e7u-Tx-hGG"/>
                     </connections>
@@ -170,10 +176,129 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wkx-ls-laZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="guu-5P-rNf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1596" y="-2195"/>
+            <point key="canvasLocation" x="-2314" y="-1495"/>
+        </scene>
+        <!--WelcomeTablBar-->
+        <scene sceneID="I1m-VV-29U">
+            <objects>
+                <tabBarController title="WelcomeTablBar" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="guh-nP-bIi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m9I-Uc-LWm">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="A5i-ET-ZXm" kind="relationship" relationship="viewControllers" id="pTH-i5-QGX"/>
+                        <segue destination="lEB-lc-56l" kind="relationship" relationship="viewControllers" id="aSC-d3-IGC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFe-cL-6vZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2313" y="-2221"/>
+        </scene>
+        <!--UserNameNavigationController-->
+        <scene sceneID="bTY-N6-RAv">
+            <objects>
+                <navigationController title="UserNameNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="lEB-lc-56l" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="User" id="50C-tA-sYd">
+                        <imageReference key="image" image="person.fill" catalog="system" renderingMode="original"/>
+                        <imageReference key="selectedImage" image="person.fill" catalog="system" renderingMode="original"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GIF-eh-J1f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W1G-x3-Wl8" kind="relationship" relationship="rootViewController" id="YMj-XW-27l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLw-Dc-8Jr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1468" y="-2221.4392803598203"/>
+        </scene>
+        <!--User Name View Controller-->
+        <scene sceneID="UNR-aK-DzO">
+            <objects>
+                <viewController id="W1G-x3-Wl8" customClass="UserNameViewController" customModule="HomeWork_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xyf-8a-vec">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pE1-HZ-q8r">
+                                <rect key="frame" x="134.5" y="314.5" width="106.5" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="More info">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="moreInfoAction" destination="W1G-x3-Wl8" eventType="touchUpInside" id="nd0-wY-w2P"/>
+                                    <segue destination="fI2-QR-kOI" kind="show" id="0Ew-mH-nLJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JYQ-1r-cht"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="pE1-HZ-q8r" firstAttribute="centerX" secondItem="xyf-8a-vec" secondAttribute="centerX" id="Cyu-9e-QfB"/>
+                            <constraint firstItem="pE1-HZ-q8r" firstAttribute="centerY" secondItem="xyf-8a-vec" secondAttribute="centerY" id="O5p-ox-Vpe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qiX-yK-4w6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rwt-eX-Mzu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-528.79999999999995" y="-2221.4392803598203"/>
+        </scene>
+        <!--Personal Information View Controller-->
+        <scene sceneID="nVn-iV-FMX">
+            <objects>
+                <viewController id="fI2-QR-kOI" customClass="PersonalInformationViewController" customModule="HomeWork_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gN5-Du-rd3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBh-C1-UL7">
+                                <rect key="frame" x="16" y="109" width="343" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="qEX-YA-cjg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cDh-ak-qak"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EBh-C1-UL7" firstAttribute="leading" secondItem="cDh-ak-qak" secondAttribute="leading" constant="16" id="ly1-aG-3yq"/>
+                            <constraint firstItem="EBh-C1-UL7" firstAttribute="top" secondItem="cDh-ak-qak" secondAttribute="top" constant="65" id="nl8-HW-jDk"/>
+                            <constraint firstItem="cDh-ak-qak" firstAttribute="trailing" secondItem="EBh-C1-UL7" secondAttribute="trailing" constant="16" id="vrz-67-ACC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uhN-H6-P2E"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="EBh-C1-UL7" id="4tu-sS-ruj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TvN-w1-ObC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317.60000000000002" y="-2221.4392803598203"/>
         </scene>
     </scenes>
     <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
