@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E02F9F7276E630500270CEB /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E02F9F6276E630500270CEB /* UserNameViewController.swift */; };
 		1E02F9F9276E74F100270CEB /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E02F9F8276E74F100270CEB /* PersonalInformationViewController.swift */; };
+		1E02FA00276F1E5800270CEB /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E02F9FF276F1E5800270CEB /* UserInfo.swift */; };
+		1E02FA02276F2F0700270CEB /* PersonInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E02FA01276F2F0700270CEB /* PersonInfo.swift */; };
 		1E0C95B82768B40D0093342B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0C95B72768B40D0093342B /* AppDelegate.swift */; };
 		1E0C95BA2768B40D0093342B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0C95B92768B40D0093342B /* SceneDelegate.swift */; };
 		1E0C95BC2768B40D0093342B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0C95BB2768B40D0093342B /* LoginViewController.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		1E02F9F6276E630500270CEB /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		1E02F9F8276E74F100270CEB /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
+		1E02F9FF276F1E5800270CEB /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		1E02FA01276F2F0700270CEB /* PersonInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfo.swift; sourceTree = "<group>"; };
 		1E0C95B42768B40D0093342B /* HomeWork_2_3_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeWork_2_3_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E0C95B72768B40D0093342B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E0C95B92768B40D0093342B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 		1E02F9FC276E7F8100270CEB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1E02F9FF276F1E5800270CEB /* UserInfo.swift */,
+				1E02FA01276F2F0700270CEB /* PersonInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,8 +115,8 @@
 			children = (
 				1E02F9FA276E7F1100270CEB /* ViewControllers */,
 				1E02F9FB276E7F4D00270CEB /* Storyboards */,
-				1E02F9FD276E7FA500270CEB /* SupportFiles */,
 				1E02F9FC276E7F8100270CEB /* Models */,
+				1E02F9FD276E7FA500270CEB /* SupportFiles */,
 				1E02F9FE276E7FC700270CEB /* Resources */,
 			);
 			path = HomeWork_2_3_1;
@@ -192,6 +198,8 @@
 				1E0C95B82768B40D0093342B /* AppDelegate.swift in Sources */,
 				1E0C95BA2768B40D0093342B /* SceneDelegate.swift in Sources */,
 				1E02F9F7276E630500270CEB /* UserNameViewController.swift in Sources */,
+				1E02FA00276F1E5800270CEB /* UserInfo.swift in Sources */,
+				1E02FA02276F2F0700270CEB /* PersonInfo.swift in Sources */,
 				1E02F9F9276E74F100270CEB /* PersonalInformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

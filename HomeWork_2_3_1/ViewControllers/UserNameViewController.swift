@@ -15,7 +15,4 @@ class UserNameViewController: UIViewController {
         super.viewDidLoad()
         self.title = finalName
     }
-
-    @IBAction func moreInfoAction() {
-    }
 }

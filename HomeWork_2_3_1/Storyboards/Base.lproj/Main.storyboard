@@ -57,7 +57,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="logInAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbR-Oq-TGI"/>
-                                            <segue destination="guh-nP-bIi" kind="presentation" id="Viq-DU-cPz"/>
+                                            <segue destination="guh-nP-bIi" kind="presentation" identifier="segueToWelcome" id="Viq-DU-cPz"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pok-W9-a1R">
@@ -184,6 +184,7 @@
                 <tabBarController title="WelcomeTablBar" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="guh-nP-bIi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m9I-Uc-LWm">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -233,8 +234,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="moreInfoAction" destination="W1G-x3-Wl8" eventType="touchUpInside" id="nd0-wY-w2P"/>
-                                    <segue destination="fI2-QR-kOI" kind="show" id="0Ew-mH-nLJ"/>
+                                    <segue destination="fI2-QR-kOI" kind="show" id="KrP-5b-6us"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -254,7 +254,7 @@
         <!--Personal Information View Controller-->
         <scene sceneID="nVn-iV-FMX">
             <objects>
-                <viewController id="fI2-QR-kOI" customClass="PersonalInformationViewController" customModule="HomeWork_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="fI2-QR-kOI" customClass="PersonalInformationViewController" customModule="HomeWork_2_3_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gN5-Du-rd3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
